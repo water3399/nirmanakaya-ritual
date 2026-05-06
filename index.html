@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>化身佛仪轨修法 - 完整学习手册</title>
+<style>
+  :root {
+    --bg: #1a1a2e;
+    --card: #16213e;
+    --accent: #e2b96f;
+    --accent2: #c4956a;
+    --text: #e0d8cc;
+    --muted: #8a8578;
+    --white: #f5f0e8;
+    --red: #c2705a;
+    --blue: #6b8cae;
+    --green: #7a9e7e;
+    --purple: #9b7ebd;
+    --border: #2a2a4a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Noto Serif TC", "Songti TC", Georgia, serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.9;
+    padding: 0;
+  }
+  /* --- Hero --- */
+  .hero {
+    text-align: center;
+    padding: 80px 20px 60px;
+    background: linear-gradient(180deg, #0f0f23 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero h1 {
+    font-size: 2.6em;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+  .hero .subtitle {
+    font-size: 1.1em;
+    color: var(--muted);
+    letter-spacing: 0.3em;
+  }
+  .hero .seed-syllable {
+    font-size: 4em;
+    color: var(--white);
+    margin: 30px 0 10px;
+    text-shadow: 0 0 40px rgba(226,185,111,0.3);
+  }
+
+  /* --- Layout --- */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* --- Section --- */
+  section {
+    margin: 50px 0;
+  }
+  section > h2 {
+    font-size: 1.5em;
+    color: var(--accent);
+    border-left: 4px solid var(--accent);
+    padding-left: 16px;
+    margin-bottom: 24px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+  }
+
+  /* --- Cards --- */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 20px;
+  }
+  .card h3 {
+    color: var(--accent2);
+    font-size: 1.15em;
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+
+  /* --- Step cards --- */
+  .step {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 28px;
+    background: rgba(226,185,111,0.06);
+    border-bottom: 1px solid var(--border);
+  }
+  .step-num {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .step-title {
+    font-size: 1.2em;
+    color: var(--white);
+    font-weight: 400;
+  }
+  .step-body {
+    padding: 24px 28px;
+  }
+  .step-body p {
+    margin-bottom: 12px;
+  }
+
+  /* --- Tags --- */
+  .tag {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.82em;
+    margin-right: 6px;
+    margin-bottom: 6px;
+  }
+  .tag-mudra { background: rgba(107,140,174,0.2); color: var(--blue); border: 1px solid rgba(107,140,174,0.3); }
+  .tag-chant { background: rgba(155,126,189,0.2); color: var(--purple); border: 1px solid rgba(155,126,189,0.3); }
+  .tag-visual { background: rgba(122,158,126,0.2); color: var(--green); border: 1px solid rgba(122,158,126,0.3); }
+  .tag-mind { background: rgba(226,185,111,0.2); color: var(--accent); border: 1px solid rgba(226,185,111,0.3); }
+
+  /* --- Visualization box --- */
+  .vis-box {
+    background: rgba(122,158,126,0.08);
+    border: 1px solid rgba(122,158,126,0.2);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .vis-box h4 {
+    color: var(--green);
+    font-size: 0.95em;
+    margin-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+
+  /* --- Chakra diagram --- */
+  .chakra-list {
+    list-style: none;
+    padding: 0;
+  }
+  .chakra-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .chakra-list li:last-child { border-bottom: none; }
+  .chakra-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .chakra-name {
+    width: 70px;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+  .chakra-desc {
+    color: var(--muted);
+    font-size: 0.92em;
+  }
+
+  /* --- Direction diagram --- */
+  .direction-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 4px;
+    max-width: 360px;
+    margin: 16px auto;
+    text-align: center;
+  }
+  .dir-cell {
+    padding: 14px 8px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+  .dir-center {
+    background: rgba(226,185,111,0.12);
+    border: 1px solid rgba(226,185,111,0.25);
+    color: var(--accent);
+    font-size: 1em;
+  }
+  .dir-highlight {
+    background: rgba(107,140,174,0.1);
+    border: 1px solid rgba(107,140,174,0.15);
+    color: var(--blue);
+  }
+
+  /* --- Images --- */
+  .ritual-img {
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+  }
+  .ritual-img-small {
+    max-width: 320px;
+  }
+  .ritual-img-medium {
+    max-width: 500px;
+  }
+  .img-caption {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85em;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  /* --- Ritual text card --- */
+  .ritual-text-card {
+    background: linear-gradient(135deg, #3a2a2a 0%, #2a1a2a 100%);
+    border: 1px solid rgba(226,185,111,0.25);
+    border-radius: 12px;
+    padding: 36px 32px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .ritual-text-card h3 {
+    color: var(--accent);
+    font-size: 1.4em;
+    margin-bottom: 24px;
+    letter-spacing: 0.2em;
+  }
+  .ritual-line {
+    margin-bottom: 18px;
+  }
+  .ritual-line .tibetan {
+    font-size: 1.15em;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .ritual-line .chinese {
+    font-size: 0.9em;
+    color: var(--muted);
+  }
+  .mantra-line {
+    font-size: 1.3em;
+    color: var(--accent);
+    margin: 24px 0;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+  }
+
+  /* --- Tip / Warning --- */
+  .tip {
+    background: rgba(226,185,111,0.08);
+    border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    margin: 16px 0;
+    font-size: 0.95em;
+  }
+  .warning {
+    background: rgba(194,112,90,0.1);
+    border-left: 3px solid var(--red);
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    margin: 16px 0;
+    font-size: 0.95em;
+  }
+
+  /* --- Arrow flow --- */
+  .flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0;
+  }
+  .flow-item {
+    padding: 8px 18px;
+    background: rgba(226,185,111,0.1);
+    border: 1px solid rgba(226,185,111,0.2);
+    border-radius: 8px;
+    color: var(--accent);
+    font-size: 0.95em;
+  }
+  .flow-arrow {
+    color: var(--muted);
+    font-size: 1.2em;
+  }
+
+  /* --- Table --- */
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+  }
+  .info-table th {
+    text-align: left;
+    color: var(--accent2);
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    font-weight: 400;
+    width: 120px;
+  }
+  .info-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  /* --- Footer --- */
+  footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--muted);
+    font-size: 0.85em;
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+  }
+
+  /* --- Lotus transformation sequence --- */
+  .transform-seq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 20px 0;
+  }
+  .transform-item {
+    padding: 12px 24px;
+    text-align: center;
+    position: relative;
+    color: var(--white);
+    font-size: 0.95em;
+  }
+  .transform-arrow {
+    color: var(--accent);
+    font-size: 1.4em;
+    line-height: 1;
+  }
+
+  /* --- Four immeasurables --- */
+  .four-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .four-item {
+    background: rgba(155,126,189,0.08);
+    border: 1px solid rgba(155,126,189,0.15);
+    border-radius: 8px;
+    padding: 16px 20px;
+    text-align: center;
+  }
+  .four-item .label {
+    font-size: 1.3em;
+    color: var(--purple);
+    margin-bottom: 4px;
+  }
+  .four-item .desc {
+    font-size: 0.85em;
+    color: var(--muted);
+  }
+
+  /* --- Facing direction table --- */
+  .facing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+  }
+  .facing-table td {
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-size: 0.95em;
+  }
+  .facing-table td:first-child {
+    color: var(--accent2);
+    width: 80px;
+  }
+
+  /* --- Lang toggle --- */
+  .lang-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    background: rgba(22,33,62,0.9);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  .lang-btn {
+    padding: 8px 16px;
+    font-size: 0.85em;
+    color: var(--muted);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+  }
+  .lang-btn.active {
+    background: rgba(226,185,111,0.15);
+    color: var(--accent);
+  }
+  .lang-btn:hover:not(.active) {
+    color: var(--text);
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 1.8em; }
+    .step-header { padding: 16px 18px; }
+    .step-body { padding: 18px; }
+    .four-grid { grid-template-columns: 1fr; }
+    .direction-grid { max-width: 280px; }
+    .lang-toggle { top: 10px; right: 10px; }
+    .lang-btn { padding: 6px 12px; font-size: 0.8em; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Lang Toggle -->
+<div class="lang-toggle">
+  <button class="lang-btn active" id="btn-simplified" onclick="switchLang('simplified')">简体</button>
+  <button class="lang-btn" id="btn-traditional" onclick="switchLang('traditional')">繁體</button>
+</div>
+
+<!-- ==================== HERO ==================== -->
+<div class="hero">
+  <div class="seed-syllable">&#x0F68;</div>
+  <h1>化身佛仪轨修法</h1>
+  <div class="subtitle">大圆满教法 &middot; 消业障 &middot; 观想无量光佛</div>
+</div>
+
+<div class="container">
+
+<!-- ==================== 教法背景 ==================== -->
+<section>
+  <h2>教法背景</h2>
+
+  <div class="card">
+    <h3>核心认知</h3>
+    <p>人生是苦的，苦的根源是执着和自我。离苦得乐，需要突破执着和自我。</p>
+    <p style="margin-top:12px; color:var(--muted);">
+      我和我的一切都是心的产物。我们了解的一切来自于我们的心，而不是我们来自于一切。<br>
+      我们不是迷失在一切中，而是迷失在自我中。一通万通——一个明白了就都明白了。
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>大圆满教法</h3>
+    <p><strong style="color:var(--white);">"大"</strong> — 世间一切都是你心的幻化</p>
+    <p><strong style="color:var(--white);">"圆满"</strong> — 众生本具圆满</p>
+    <p style="margin-top:12px;">纯粹的直指人心、明心见性的教法，通过你自己的方式通达你。<br>
+    降服其心的方式：<strong style="color:var(--accent);">在生活里修炼</strong>。生活是最好的修炼场所，是有勇气的人学的。</p>
+  </div>
+
+  <div class="card">
+    <h3>修炼路径</h3>
+    <div class="flow">
+      <span class="flow-item">信仰</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-item">修炼</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-item">证悟</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-item">解脱</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>化身佛仪轨的三大目的</h3>
+    <p>1. <strong style="color:var(--white);">消业障</strong> — 清除累世业力与烦恼</p>
+    <p>2. <strong style="color:var(--white);">观想无量光佛</strong> — 获得佛的无限能量与加持</p>
+    <p>3. <strong style="color:var(--white);">空性的学习</strong> — 体悟心性本清净</p>
+  </div>
+
+  <div class="card">
+    <h3>四无量心</h3>
+    <div class="four-grid">
+      <div class="four-item">
+        <div class="label">慈</div>
+        <div class="desc">仁慈<br>愿诸众生永具安乐和安乐因</div>
+      </div>
+      <div class="four-item">
+        <div class="label">悲</div>
+        <div class="desc">怜悯<br>愿诸众生远离痛苦及痛苦因</div>
+      </div>
+      <div class="four-item">
+        <div class="label">喜</div>
+        <div class="desc">欢喜之心<br>愿诸众生永具无苦之乐</div>
+      </div>
+      <div class="four-item">
+        <div class="label">舍</div>
+        <div class="desc">对亲人、仇人都能升起欢喜心<br>愿诸众生远离苦乐二法，住无量平等舍</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 修法前准备 ==================== -->
+<section>
+  <h2>修法前准备</h2>
+
+  <div class="card">
+    <h3>场地布置</h3>
+    <table class="info-table">
+      <tr><th>禅垫</th><td>铺设禅垫，端坐其上</td></tr>
+      <tr><th>供品</th><td>点一柱香、点一盏灯、供一些花</td></tr>
+      <tr><th>环境</th><td>干净整洁，有仪式感；清除旁边拖鞋等杂物</td></tr>
+      <tr><th>朝向</th><td>面朝通透宽阔的方向，无干扰</td></tr>
+    </table>
+
+    <p style="margin-top: 16px; color: var(--accent2);">朝向参考：</p>
+    <table class="facing-table">
+      <tr><td>早上</td><td>朝东</td></tr>
+      <tr><td>白天</td><td>朝南</td></tr>
+      <tr><td>傍晚</td><td>朝西（最佳修法时段）</td></tr>
+      <tr><td>通用</td><td>往空间最大的方向</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>修法须知</h3>
+    <div class="warning">
+      <strong>避开时段：</strong>每天 0:00-2:00 及 12:00-14:00 不做修法
+    </div>
+    <div class="tip">
+      <strong>最佳时段：</strong>傍晚时候最佳
+    </div>
+    <table class="info-table">
+      <tr><th>最少时长</th><td>不少于 20 分钟</td></tr>
+      <tr><th>建议时长</th><td>30 - 60 分钟为宜</td></tr>
+      <tr><th>最少次数</th><td>每人至少修满 <strong style="color:var(--accent);">49 次</strong></td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>适合修法的时机</h3>
+    <p>内心悲伤、无助时</p>
+    <p>莫名其妙卡住了的时候</p>
+    <p>莫名其妙生病的时候</p>
+  </div>
+</section>
+
+<!-- ==================== 完整修法步骤 ==================== -->
+<section>
+  <h2>完整修法步骤（十一步）</h2>
+
+  <div class="tip" style="margin-bottom:28px;">
+    核心心法：<strong style="color:var(--accent);">安住中觉察，觉察中安住</strong>
+  </div>
+
+  <!-- Step 1 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">1</div>
+      <div class="step-title">上师祈请颂 &times; 3</div>
+    </div>
+    <div class="step-body">
+      <span class="tag tag-chant">持诵</span>
+      <span class="tag tag-mudra">合掌</span>
+      <p style="margin-top:12px;">念诵上师祈请颂三遍。这是对传承的祈祷，目的是对即将修的法升起更大的信心。</p>
+
+      <div class="ritual-text-card" style="padding:24px 24px; margin-top:16px;">
+        <div class="ritual-line">
+          <div class="tibetan">计祖得哇庆布坡长德</div>
+          <div class="chinese">常住极乐顶宝殿</div>
+        </div>
+        <div class="ritual-line">
+          <div class="tibetan">真庆杂卫喇嘛索哇得</div>
+          <div class="chinese">祈请根本上师尊</div>
+        </div>
+        <div class="ritual-line">
+          <div class="tibetan">桑吉僧思东巴仁波切</div>
+          <div class="chinese">使显觉心如意宝</div>
+        </div>
+        <div class="ritual-line" style="margin-bottom:0;">
+          <div class="tibetan">让俄让给喜巴幸吉罗</div>
+          <div class="chinese">加持自性能自了</div>
+        </div>
+      </div>
+
+      <div class="tip">此阶段目标：<strong>升起信仰，升起敬畏之心</strong></div>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">2</div>
+      <div class="step-title">四皈依 &times; 3</div>
+    </div>
+    <div class="step-body">
+      <span class="tag tag-chant">持诵</span>
+      <span class="tag tag-mudra">合掌</span>
+      <p style="margin-top:12px;">念诵四皈依三遍。这是对上师三宝的信任与祈祷。</p>
+
+      <div class="ritual-text-card" style="padding:24px 24px; margin-top:16px;">
+        <div class="ritual-line">
+          <div class="tibetan">喇嘛啦嘉斯切奥</div>
+          <div class="chinese">皈依金刚上师</div>
+        </div>
+        <div class="ritual-line">
+          <div class="tibetan">桑吉啦嘉斯切奥</div>
+          <div class="chinese">皈依佛</div>
+        </div>
+        <div class="ritual-line">
+          <div class="tibetan">本啦嘉斯切奥</div>
+          <div class="chinese">皈依法</div>
+        </div>
+        <div class="ritual-line" style="margin-bottom:0;">
+          <div class="tibetan">喜饶雍仲僧辉措南拉嘉斯切奥</div>
+          <div class="chinese">皈依僧</div>
+        </div>
+      </div>
+
+      <div class="tip">此阶段目标：<strong>升起信仰，升起敬畏之心</strong></div>
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">3</div>
+      <div class="step-title">发心文 &times; 3</div>
+    </div>
+    <div class="step-body">
+      <span class="tag tag-chant">持诵</span>
+      <span class="tag tag-mudra">禅定手印</span>
+      <p style="margin-top:12px;">由合掌改为禅定手印，念诵发心文三遍。</p>
+
+      <div class="ritual-text-card" style="padding:24px 24px; margin-top:16px;">
+        <div class="ritual-line">
+          <div class="tibetan">吉达嘉哇帕巴几信度</div>
+          <div class="chinese">犹如如来胜尊行利生</div>
+        </div>
+        <div class="ritual-line">
+          <div class="tibetan">得嗦度松格卫土巴吉</div>
+          <div class="chinese">此等三世积累善功德</div>
+        </div>
+        <div class="ritual-line">
+          <div class="tibetan">僧金桑杰脱巴夏卫谢</div>
+          <div class="chinese">令众有情得证正觉果</div>
+        </div>
+        <div class="ritual-line" style="margin-bottom:0;">
+          <div class="tibetan">达尼向秋确度僧杰哟</div>
+          <div class="chinese">为此我发殊胜菩提心</div>
+        </div>
+      </div>
+
+      <div class="tip">此阶段目标：<strong>发心，发菩提心，发四无量心</strong></div>
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">4</div>
+      <div class="step-title">啊 嗡 吽 + 观想众生</div>
+    </div>
+    <div class="step-body">
+      <span class="tag tag-chant">持诵</span>
+      <span class="tag tag-visual">观想</span>
+      <span class="tag tag-mudra">禅定手印</span>
+      <p style="margin-top:12px;">念诵 <strong style="color:var(--white);">「啊 嗡 吽」</strong> 三遍、五遍或七遍不等。发菩提心——为众生修这个法，为当下和我一样受苦的人。</p>
+
+      <div class="vis-box">
+        <h4>观想：四方众生</h4>
+        <div class="direction-grid">
+          <div class="dir-cell"></div>
+          <div class="dir-cell dir-highlight">后方<br><small>一切众生<br>亲朋好友</small></div>
+          <div class="dir-cell"></div>
+          <div class="dir-cell dir-highlight">左方<br><small>现世母亲<br>累世母亲<br>母系一族</small></div>
+          <div class="dir-cell dir-center">自己</div>
+          <div class="dir-cell dir-highlight">右方<br><small>现世父亲<br>累世父亲<br>父系一族</small></div>
+          <div class="dir-cell"></div>
+          <div class="dir-cell dir-highlight">前方<br><small>当下最恨<br>最讨厌的人<br>（现世仇人）</small></div>
+          <div class="dir-cell"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 5 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">5</div>
+      <div class="step-title">安静禅定</div>
+    </div>
+    <div class="step-body">
+      <span class="tag tag-mind">安住</span>
+      <span class="tag tag-mudra">禅定手印</span>
+      <p style="margin-top:12px;">身体放松，清空大脑，安静地待一会儿。自然的禅定。</p>
+    </div>
+  </div>
+
+  <!-- Step 6 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">6</div>
+      <div class="step-title">睁眼发「啊」&times; 3 &mdash; 观想化现无量光佛</div>
+    </div>
+    <div class="step-body">
+      <span class="tag tag-chant">持诵</span>
+      <span class="tag tag-visual">观想</span>
+      <span class="tag tag-mudra">禅定手印</span>
+      <p style="margin-top:12px;">睁开眼睛，同时发 <strong style="color:var(--white);">「啊」</strong> 三遍。</p>
+
+      <div class="vis-box">
+        <h4>观想：种子字化现过程</h4>
+        <img src="微信圖片_2026-05-05_204836_930.jpg" alt="种子字「啊」— 日轮月轮莲花" class="ritual-img ritual-img-small">
+        <div class="img-caption">种子字「啊」&mdash; 白色莲花中日轮（红）与月轮（白）</div>
+        <div class="transform-seq">
+          <div class="transform-item">第三遍「啊」时，虚空中出现白色旋转的 <strong style="color:var(--accent);">「啊」字</strong></div>
+          <div class="transform-arrow">&darr;</div>
+          <div class="transform-item">瞬间变为 <strong style="color:var(--white);">白色莲花</strong>（多瓣）</div>
+          <div class="transform-arrow">&darr;</div>
+          <div class="transform-item">莲花中间出现 <strong style="color:var(--red);">红色日轮</strong>（象征红菩提）</div>
+          <div class="transform-arrow">&darr;</div>
+          <div class="transform-item">日轮之上出现 <strong style="color:var(--white);">白色月轮</strong>（象征白菩提）</div>
+          <div class="transform-arrow">&darr;</div>
+          <div class="transform-item">日月轮上方出现一个特别亮的 <strong style="color:var(--accent);">「啊」字</strong></div>
+          <div class="transform-arrow">&darr;</div>
+          <div class="transform-item" style="color:var(--accent); font-size:1.1em;">「啊」字旋转，瞬间化现为 <strong>无量光佛</strong></div>
+        </div>
+      </div>
+      <p style="color:var(--muted); font-size:0.9em;">无量光佛 — 一切诸佛之尊。</p>
+    </div>
+  </div>
+
+  <!-- Step 7 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">7</div>
+      <div class="step-title">念化身佛礼赞 + 心咒 &mdash; 获取佛的能量</div>
+    </div>
+    <div class="step-body">
+      <span class="tag tag-chant">持诵</span>
+      <span class="tag tag-mind">信念</span>
+      <p style="margin-top:12px;">变成无量光佛的一瞬间，开始念 <strong style="color:var(--white);">仪轨前两句（化身佛礼赞）+ 化身佛心咒</strong>，多遍持诵。</p>
+      <img src="微信圖片_2026-05-05_204852_663.jpg" alt="化身佛心咒 — 无量光佛唐卡" class="ritual-img ritual-img-medium">
+      <div class="img-caption">化身佛心咒 &mdash; 阿噶阿麦德智思纳波希希嘛嘛嗦哈</div>
+
+      <div class="tip" style="font-size:0.88em;">
+        <strong>心咒音译对照：</strong><br>
+        仪轨图片版：阿噶阿麦德智思纳波希希嘛嘛嗦哈<br>
+        竹青林法本版：啊噶啊梅嘟智斯纳博喜喜玛儿玛儿嗦哈<br>
+        <span style="color:var(--muted);">同一藏文咒语的不同汉字音译，发音相同，均可使用。</span>
+      </div>
+
+      <div class="tip">对佛坚定的信念和依赖，可以融化我的业。此阶段获得佛的无限能量，感受暖流状态。</div>
+    </div>
+  </div>
+
+  <!-- Step 8 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">8</div>
+      <div class="step-title">忏悔 + 甘露净化 + 化身为佛 + 普照众生</div>
+    </div>
+    <div class="step-body">
+      <span class="tag tag-chant">持咒</span>
+      <span class="tag tag-visual">观想</span>
+      <span class="tag tag-mind">忏悔</span>
+      <p style="margin-top:12px;">这是整个修法最核心的阶段，包含四个层次：</p>
+
+      <!-- 8a: 忏悔 -->
+      <div class="vis-box" style="margin-top:20px;">
+        <h4>第一层：深层忏悔</h4>
+        <p>在无量光佛面前，坦然、深层、诚恳地做忏悔，反思过患。</p>
+        <p style="margin-top:8px;"><strong style="color:var(--white);">过患：</strong>自己的错误，给自己以及他人带来的伤害。有意无意的，直接间接的，过去无尽轮回中的过患。</p>
+        <div class="warning" style="margin-top:12px;">
+          <strong>注意：</strong>并非是对自己的指责和自责，而是需要自己深层的、诚恳的、坦然面对。
+        </div>
+      </div>
+
+      <!-- 8b: 甘露净化 -->
+      <div class="vis-box">
+        <h4>第二层：甘露灌顶净化</h4>
+        <p>无量光佛心轮中出现「啊」字，成千上万的「啊」字围绕向内旋转（左转）。转的过程中继续忏悔，佛的光和暖更强。</p>
+        <p style="margin-top:10px;">「啊」字渐变为白色甘露水（似牛奶），源源不断从佛心轮流出，像泉水一样：</p>
+
+        <div class="flow" style="margin:16px 0;">
+          <span class="flow-item">顶轮</span>
+          <span class="flow-arrow">&rarr;</span>
+          <span class="flow-item">喉轮</span>
+          <span class="flow-arrow">&rarr;</span>
+          <span class="flow-item">心轮</span>
+          <span class="flow-arrow">&rarr;</span>
+          <span class="flow-item">丹田轮</span>
+          <span class="flow-arrow">&rarr;</span>
+          <span class="flow-item">海底轮</span>
+        </div>
+
+        <p>甘露填满身体全部，无量光佛的爱与慈悲填满你的身体。毛孔打开——</p>
+
+        <p style="margin-top:12px; color:var(--red);">像布袋装满水一样开始溢出，全身毛孔打开，所有脏东西涌出：</p>
+        <p style="color:var(--muted); font-size:0.9em; margin-top:6px;">
+          冒黑烟、冒黑气（水蒸气般）&rarr; 浓血（变黄、变白）、黑血 &rarr; 脓、瘤 &rarr; 蜘蛛、螃蟹、青蛙、蝎子、蜈蚣、蛆等。从手脚指甲也在不断流出。
+        </p>
+
+        <p style="margin-top:16px;">流得越来越多，大地无法承载，瞬间裂开。</p>
+        <p style="color:var(--muted); font-size:0.9em;">（18层 — 虚词，代表很深很深。师父建议多流一会儿，别急着开裂。）</p>
+
+        <p style="margin-top:12px;">18层下面有无数的生命 — <strong style="color:var(--white);">冤亲债主</strong>，有些长着三个头、五个头，有些有许多头，头上有许多的嘴巴，不断呐喊你的名字。</p>
+        <p style="margin-top:8px;">身体流出的脏东西瞬间全部到他们嘴里。他们都吃饱了，满足了，呐喊停止。<strong style="color:var(--accent);">大地合上。</strong></p>
+        <p style="margin-top:12px;">整个世界和身心变得清净轻松，身体仿佛一个特别脏的玻璃杯被洗净。在这种清净状态中多呆一会儿。</p>
+      </div>
+
+      <!-- 8c: 五色光加持 -->
+      <div class="vis-box">
+        <h4>第三层：五色光加持 &mdash; 化身为佛</h4>
+        <p>世界清净了，气息无比干净、通透。无量光佛心轮中出现<strong style="color:var(--accent);">五颜六色的光</strong>，像演唱会灯光打在身上的感觉，照在五轮之上：</p>
+        <ul class="chakra-list" style="margin-top:12px;">
+          <li><span class="chakra-dot" style="background:#e8e0d0;"></span><span class="chakra-name">顶轮</span><span class="chakra-desc">业和烦恼的消除</span></li>
+          <li><span class="chakra-dot" style="background:var(--blue);"></span><span class="chakra-name">喉轮</span><span class="chakra-desc">烦恼障消除</span></li>
+          <li><span class="chakra-dot" style="background:var(--green);"></span><span class="chakra-name">心轮</span><span class="chakra-desc">所知障消除</span></li>
+          <li><span class="chakra-dot" style="background:var(--accent);"></span><span class="chakra-name">丹田轮</span><span class="chakra-desc">习性障碍消除</span></li>
+          <li><span class="chakra-dot" style="background:var(--red);"></span><span class="chakra-name">海底轮</span><span class="chakra-desc">罪孽消除</span></li>
+        </ul>
+        <p style="margin-top:16px;">身体每一处都被佛加持，圆满获得智慧慈悲加持。</p>
+        <p style="margin-top:8px; color:var(--accent); font-size:1.05em;"><strong>自身瞬间变成无量光佛的样子</strong> — 在功德、智慧、慈悲上没有任何区别，平等无二，殊胜庄严。</p>
+
+        <div class="tip" style="margin-top:16px;">
+          <strong style="color:var(--accent);">佛慢：</strong>坚定不移地相信自己与无量光佛一样的殊胜庄严，不二，平等。
+        </div>
+      </div>
+
+      <!-- 8d: 普照众生 -->
+      <div class="vis-box">
+        <h4>第四层：普照三千大千世界</h4>
+        <p>自己心轮中出现「啊」字，成千上万个「啊」字围绕旋转。这些「啊」字变成五颜六色的光，从心轮向外照射。</p>
+        <p style="margin-top:10px;">光普照在亲朋好友身上，无量众生也同样收到五彩光的普照。光和咒语弥漫整个空间，铺满整个宇宙和虚空。</p>
+        <p style="margin-top:10px; color:var(--accent);">天下认识和不认识的人，都变成了无量光佛。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 9 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">9</div>
+      <div class="step-title">与佛合一</div>
+    </div>
+    <div class="step-body">
+      <span class="tag tag-visual">观想</span>
+      <p style="margin-top:12px;">所有众生都收到无量光佛的心轮中。</p>
+      <p>观想的无量光佛从顶轮进入，经过喉轮、心轮，在心轮处与自己<strong style="color:var(--accent);">合二为一</strong>。</p>
+      <p style="margin-top:12px;">恢复空灵。从有相观想回归无相空性。</p>
+      <div class="tip">空里来，又回到了空里。</div>
+    </div>
+  </div>
+
+  <!-- Step 10 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">10</div>
+      <div class="step-title">安静纯然 &mdash; 安住空性</div>
+    </div>
+    <div class="step-body">
+      <span class="tag tag-mind">安住</span>
+      <p style="margin-top:12px;">安静纯然地安住一会儿。让刚才整个观想的体验沉淀，不思维、不造作，纯然地待在空灵中。</p>
+    </div>
+  </div>
+
+  <!-- Step 11 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">11</div>
+      <div class="step-title">念仪轨后段偈颂 + 回向</div>
+    </div>
+    <div class="step-body">
+      <span class="tag tag-chant">持诵</span>
+      <p style="margin-top:12px;">从空性安住中出定，念诵仪轨后段释义偈颂（阿噶森宁囊巴道...至卓囊本宁应色桑杰秀），以文字确认并封印整个修法的成果。然后念回向文，将修法功德回向一切众生。</p>
+
+      <div class="ritual-text-card" style="padding:24px 24px; margin-top:16px;">
+        <h3 style="font-size:1.1em; margin-bottom:16px;">回向文</h3>
+        <div class="ritual-line">
+          <div class="tibetan">郭松达毕格瓦贡吉巴</div>
+          <div class="chinese">三门清净所修善业众</div>
+        </div>
+        <div class="ritual-line">
+          <div class="tibetan">康松僧尖囊吉顿度哦</div>
+          <div class="chinese">为利三界有情而回向</div>
+        </div>
+        <div class="ritual-line">
+          <div class="tibetan">度松绍毕来智根雄乃</div>
+          <div class="chinese">清除三世积累业障已</div>
+        </div>
+        <div class="ritual-line" style="margin-bottom:0;">
+          <div class="tibetan">古松佐毕桑杰纽脱秀</div>
+          <div class="chinese">愿速得证三身圆满佛</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 整体流程总览 ==================== -->
+<section>
+  <h2>整体流程总览</h2>
+  <div class="card">
+    <div class="flow" style="flex-wrap:wrap;">
+      <span class="flow-item">1. 上师祈请颂</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-item">2. 四皈依</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-item">3. 发心文</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-item">4. 啊嗡吽</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-item">5. 禅定</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-item">6. 化现佛</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-item">7. 礼赞+心咒</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-item">8. 忏悔净化</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-item">9. 与佛合一</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-item">10. 安住</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-item">11. 回向</span>
+    </div>
+
+    <div style="margin-top:20px; text-align:center; color:var(--muted); font-size:0.9em;">
+      <p>前 4 步 = <span style="color:var(--blue);">升起信仰 + 发心</span>（合掌 &rarr; 禅定手印）</p>
+      <p>第 5-6 步 = <span style="color:var(--green);">禅定 + 化现佛身</span></p>
+      <p>第 7-8 步 = <span style="color:var(--accent);">持咒 + 核心观想（忏悔、净化、化身、普照）</span>— 念仪轨前两句 + 心咒</p>
+      <p>第 9-10 步 = <span style="color:var(--purple);">合一 + 安住空性</span>（无言、纯然）</p>
+      <p>第 11 步 = <span style="color:var(--purple);">念仪轨后段偈颂 + 回向文</span>（确认封印 + 回向功德）</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 仪轨经文 ==================== -->
+<section>
+  <h2>化身佛仪轨经文</h2>
+
+  <div class="card" style="text-align:center; padding:12px;">
+    <img src="微信圖片_2026-05-05_204846_355.jpg" alt="化身佛仪轨经文" class="ritual-img" style="max-width:480px; margin:0 auto;">
+  </div>
+
+  <div class="card" style="text-align:center;">
+    <h3 style="color:var(--accent2); margin-bottom:12px;">师父持诵录音</h3>
+    <audio controls style="width:100%; max-width:480px;">
+      <source src="20210720 化身佛修法仪轨.mp3" type="audio/mpeg">
+      浏览器不支持音频播放
+    </audio>
+    <p class="img-caption" style="margin-top:8px;">化身佛修法仪轨 &mdash; 可跟随持诵</p>
+  </div>
+
+  <div class="ritual-text-card">
+    <h3>化身佛仪轨</h3>
+
+    <div class="ritual-line">
+      <div class="tibetan">阔哇森结陀杰徒吉塔巴真比巴</div>
+      <div class="chinese">慈悲救度轮回有情令其解脱尊</div>
+    </div>
+    <div class="ritual-line">
+      <div class="tibetan">幸饶丹比格拉恰撩罗</div>
+      <div class="chinese">幸饶如来佛我礼敬</div>
+    </div>
+
+    <div class="mantra-line">阿噶阿麦德智思纳波希希嘛嘛嗦哈</div>
+
+    <div style="margin-top:28px; text-align:center; max-width:480px; margin-left:auto; margin-right:auto;">
+      <div class="ritual-line">
+        <div class="tibetan">阿噶森宁囊巴道</div>
+        <div class="chinese">"阿噶" 心性本清净</div>
+      </div>
+      <div class="ritual-line">
+        <div class="tibetan">阿麦耶西俄杜洒</div>
+        <div class="chinese">"阿麦" 智慧大光明</div>
+      </div>
+      <div class="ritual-line">
+        <div class="tibetan">德智色亿恩松祥</div>
+        <div class="chinese">"德智思" 能灭恶趣</div>
+      </div>
+      <div class="ritual-line">
+        <div class="tibetan">纳波来吉帝智道</div>
+        <div class="chinese">"纳波" 灭业之罪障</div>
+      </div>
+      <div class="ritual-line">
+        <div class="tibetan">希希阔微杜昂秀</div>
+        <div class="chinese">"希希" 愿灭轮回苦</div>
+      </div>
+      <div class="ritual-line">
+        <div class="tibetan">嘛嘛得微森洞得</div>
+        <div class="chinese">"嘛嘛" 令具快乐心</div>
+      </div>
+      <div class="ritual-line">
+        <div class="tibetan">嗦哈隆夺日扎炯</div>
+        <div class="chinese">"嗦哈" 破敌邪见魔</div>
+      </div>
+      <div class="ritual-line">
+        <div class="tibetan">杜昂秀谢宁波得</div>
+        <div class="chinese">如此灭苦之心咒</div>
+      </div>
+      <div class="ritual-line">
+        <div class="tibetan">扩卫杜昂洞朱乃</div>
+        <div class="chinese">永断轮回之苦已</div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px; padding-top:20px; border-top:1px solid rgba(226,185,111,0.2);">
+      <div class="ritual-line">
+        <div class="tibetan" style="color:var(--red);">卓囊本宁应色桑杰秀</div>
+        <div class="chinese">愿众法性界成佛</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 五轮对照 ==================== -->
+<section>
+  <h2>五轮与障碍对照</h2>
+  <div class="card">
+    <ul class="chakra-list">
+      <li>
+        <span class="chakra-dot" style="background:#e8e0d0;"></span>
+        <span class="chakra-name">顶轮</span>
+        <span class="chakra-desc">清除业和烦恼 &mdash; 甘露从此灌入</span>
+      </li>
+      <li>
+        <span class="chakra-dot" style="background:var(--blue);"></span>
+        <span class="chakra-name">喉轮</span>
+        <span class="chakra-desc">烦恼障 &mdash; 情绪与心理层面的障碍</span>
+      </li>
+      <li>
+        <span class="chakra-dot" style="background:var(--green);"></span>
+        <span class="chakra-name">心轮</span>
+        <span class="chakra-desc">所知障 &mdash; 认知与知见层面的障碍</span>
+      </li>
+      <li>
+        <span class="chakra-dot" style="background:var(--accent);"></span>
+        <span class="chakra-name">丹田轮</span>
+        <span class="chakra-desc">习性 &mdash; 深层惯性模式</span>
+      </li>
+      <li>
+        <span class="chakra-dot" style="background:var(--red);"></span>
+        <span class="chakra-name">海底轮</span>
+        <span class="chakra-desc">罪业，一切罪孽</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+</div><!-- /container -->
+
+<footer>
+  化身佛仪轨修法 &middot; 大圆满教法<br>
+  整理自王乐观（乐观）课堂笔记与教学资料<br>
+  经文出处：竹青林法本（喜玛拉雅竹青文化中心 &middot; 阿噶巴仁波切）
+</footer>
+
+<script>
+// Simplified ↔ Traditional Chinese conversion map (common chars used in this document)
+const S2T = {'体':'體','众':'眾','业':'業','习':'習','义':'義','乐':'樂','书':'書','买':'買','亿':'億','从':'從','仅':'僅','仪':'儀','伞':'傘','传':'傳','伤':'傷','净':'淨','减':'減','准':'準','凶':'兇','击':'擊','创':'創','则':'則','剩':'剩','动':'動','务':'務','劝':'勸','势':'勢','华':'華','单':'單','卫':'衛','历':'歷','压':'壓','厌':'厭','发':'發','变':'變','叹':'嘆','号':'號','叶':'葉','听':'聽','启':'啟','呐':'吶','响':'響','哟':'喲','唤':'喚','啊':'啊','嘛':'嘛','噶':'噶','围':'圍','园':'園','图':'圖','团':'團','坏':'壞','坚':'堅','场':'場','块':'塊','处':'處','备':'備','够':'夠','头':'頭','夺':'奪','奋':'奮','妇':'婦','妈':'媽','学':'學','宁':'寧','实':'實','宝':'寶','审':'審','对':'對','寿':'壽','将':'將','尘':'塵','尝':'嘗','尽':'盡','层':'層','岁':'歲','岗':'崗','岭':'嶺','币':'幣','师':'師','帅':'帥','带':'帶','帮':'幫','干':'乾','并':'並','广':'廣','庆':'慶','应':'應','开':'開','异':'異','弃':'棄','张':'張','弥':'彌','归':'歸','当':'當','录':'錄','彻':'徹','径':'徑','忆':'憶','忧':'憂','态':'態','总':'總','恋':'戀','恶':'惡','悦':'悅','惊':'驚','惧':'懼','惩':'懲','愿':'願','慈':'慈','战':'戰','户':'戶','执':'執','扎':'紮','扩':'擴','护':'護','报':'報','担':'擔','拟':'擬','择':'擇','挡':'擋','挣':'掙','挤':'擠','损':'損','换':'換','据':'據','摄':'攝','撑':'撐','操':'操','斗':'鬥','断':'斷','无':'無','旧':'舊','时':'時','显':'顯','晓':'曉','暂':'暫','术':'術','杀':'殺','杂':'雜','权':'權','条':'條','来':'來','极':'極','构':'構','标':'標','栏':'欄','样':'樣','梦':'夢','检':'檢','楼':'樓','欢':'歡','殊':'殊','残':'殘','毁':'毀','气':'氣','污':'污','没':'沒','泪':'淚','洁':'潔','浅':'淺','测':'測','济':'濟','浑':'渾','满':'滿','漏':'漏','灭':'滅','灯':'燈','灵':'靈','烛':'燭','烦':'煩','热':'熱','烧':'燒','爱':'愛','牺':'犧','犹':'猶','独':'獨','环':'環','现':'現','玛':'瑪','瓶':'瓶','产':'產','畅':'暢','疗':'療','痴':'癡','瘟':'瘟','盖':'蓋','盘':'盤','离':'離','种':'種','积':'積','称':'稱','稳':'穩','穷':'窮','窍':'竅','竞':'競','笔':'筆','简':'簡','类':'類','粮':'糧','纪':'紀','纯':'純','纲':'綱','纳':'納','纵':'縱','纷':'紛','纹':'紋','纺':'紡','练':'練','组':'組','终':'終','结':'結','给':'給','络':'絡','统':'統','绍':'紹','经':'經','绝':'絕','继':'繼','维':'維','综':'綜','绿':'綠','缘':'緣','缠':'纏','罗':'羅','罚':'罰','罪':'罪','置':'置','美':'美','翻':'翻','耻':'恥','聪':'聰','胜':'勝','脑':'腦','脱':'脫','脏':'髒','腊':'臘','腻':'膩','致':'緻','节':'節','苦':'苦','范':'範','荣':'榮','药':'藥','获':'獲','虑':'慮','虚':'虛','蛆':'蛆','蜘':'蜘','蝎':'蠍','蛛':'蛛','蜈':'蜈','蚣':'蚣','螃':'螃','蟹':'蟹','蛙':'蛙','补':'補','装':'裝','裤':'褲','观':'觀','觉':'覺','计':'計','认':'認','让':'讓','议':'議','讨':'討','记':'記','讲':'講','许':'許','论':'論','设':'設','证':'證','评':'評','识':'識','诚':'誠','话':'話','诵':'誦','说':'說','请':'請','诸':'諸','读':'讀','课':'課','谁':'誰','调':'調','谢':'謝','谱':'譜','谨':'謹','贝':'貝','贡':'貢','财':'財','质':'質','贪':'貪','购':'購','贼':'賊','赏':'賞','赞':'贊','赶':'趕','趋':'趨','轮':'輪','转':'轉','轨':'軌','达':'達','过':'過','运':'運','进':'進','远':'遠','违':'違','连':'連','迹':'跡','适':'適','选':'選','遗':'遺','释':'釋','鉴':'鑒','针':'針','钟':'鐘','铃':'鈴','银':'銀','锁':'鎖','错':'錯','键':'鍵','镇':'鎮','长':'長','门':'門','闭':'閉','问':'問','闲':'閒','间':'間','阔':'闊','阵':'陣','阶':'階','际':'際','险':'險','随':'隨','隐':'隱','难':'難','雄':'雄','静':'靜','面':'面','韩':'韓','页':'頁','顶':'頂','顿':'頓','颠':'顛','领':'領','频':'頻','题':'題','颜':'顏','风':'風','饥':'飢','馆':'館','驱':'驅','验':'驗','骨':'骨','魔':'魔','鬼':'鬼','鸡':'雞','黄':'黃','齐':'齊','龄':'齡','龙':'龍','轩':'軒','佛':'佛','菩':'菩','萨':'薩','禅':'禪','悟':'悟','咒':'咒','诀':'訣','颂':'頌','皈':'皈','依':'依','僧':'僧','祈':'祈','祷':'禱','忏':'懺','悔':'悔','障':'障','罄':'罄','殿':'殿','迁':'遷','迈':'邁','饶':'饒','饰':'飾','馈':'饋','驭':'馭','驳':'駁','骄':'驕','骗':'騙','骤':'驟','髓':'髓'};
+const T2S = {};
+for (const [s, t] of Object.entries(S2T)) { if (s !== t) T2S[t] = s; }
+
+let currentLang = 'simplified';
+let originalHTML = '';
+
+function switchLang(lang) {
+  if (lang === currentLang) return;
+
+  // Save original on first switch
+  if (!originalHTML) {
+    originalHTML = document.body.innerHTML;
+  }
+
+  if (lang === 'traditional') {
+    convertPage(S2T);
+  } else {
+    // Restore original simplified
+    document.body.innerHTML = originalHTML;
+  }
+
+  currentLang = lang;
+  document.getElementById('btn-simplified').classList.toggle('active', lang === 'simplified');
+  document.getElementById('btn-traditional').classList.toggle('active', lang === 'traditional');
+}
+
+function convertPage(map) {
+  // Reset to original first
+  if (originalHTML) {
+    document.body.innerHTML = originalHTML;
+  }
+
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+
+  for (const node of nodes) {
+    let text = node.nodeValue;
+    let converted = '';
+    for (const char of text) {
+      converted += map[char] || char;
+    }
+    if (converted !== text) {
+      node.nodeValue = converted;
+    }
+  }
+}
+</script>
+
+</body>
+</html>
